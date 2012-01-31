@@ -16,6 +16,7 @@ var DEFAULT_SETTINGS = {
     queryParam: "q",
     searchDelay: 300,
     minChars: 1,
+    maxResults: null,
     propertyToSearch: "name",
     jsonContainer: null,
     contentType: "json",
@@ -720,6 +721,9 @@ $.TokenList = function (input, url_or_data, settings) {
                 .hide();
 
             $.each(results, function(index, value) {
+                if(settings.maxResults && index >= settings.maxResults)
+                    return;
+
                 var this_li = settings.resultsFormatter(value);
 
                 this_li = find_value_and_highlight_term(this_li ,value[settings.propertyToSearch], query);
