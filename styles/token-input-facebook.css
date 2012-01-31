@@ -81,7 +81,7 @@ div.token-input-dropdown-facebook {
     cursor: default;
     font-size: 11px;
     font-family: Verdana, sans-serif;
-    z-index: 1;
+    z-index: 9002;
 }
 
 div.token-input-dropdown-facebook p {
@@ -119,4 +119,11 @@ div.token-input-dropdown-facebook ul li em {
 div.token-input-dropdown-facebook ul li.token-input-selected-dropdown-item-facebook {
     background-color: #3b5998;
     color: #fff;
+}
+
+img.token-input-friend-pic{
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin: 0 3px;
 }
